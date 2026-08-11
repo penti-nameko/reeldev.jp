@@ -13,4 +13,4 @@ namespace: reeldevjp
 
 secretGenerator:
   - name: reeldevjp-secrets
-    behavior: merge
+    behavior: creates

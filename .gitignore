@@ -1,0 +1,34 @@
+# ───────── Dependencies ─────────
+node_modules/
+
+# ───────── Build outputs ─────────
+dist/
+build/
+frontend/dist/
+bff/dist/
+
+# ───────── Environment variables ─────────
+.env
+.env.local
+.env.*.local
+
+# ───────── Secrets / k8s ─────────
+# secret.yaml は絶対にコミットしない
+k8s/base/secret.yaml
+
+# ───────── Logs ─────────
+*.log
+npm-debug.log*
+
+# ───────── OS ─────────
+.DS_Store
+Thumbs.db
+
+# ───────── Editor ─────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ───────── TypeScript ─────────
+*.tsbuildinfo

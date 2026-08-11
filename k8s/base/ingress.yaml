@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: portfolio-ingress
+  annotations:
+    # ingress-nginx
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "30"
+    # TLS: cert-manager で自動発行する場合
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - yourname.dev
+      secretName: portfolio-tls
+  rules:
+    - host: yourname.dev
+      http:
+        paths:
+          # /api/* は BFF へ
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: portfolio-bff
+                port:
+                  number: 3001
+          # それ以外は Frontend へ
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: portfolio-frontend
+                port:
+                  number: 80

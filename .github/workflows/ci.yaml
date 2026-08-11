@@ -54,8 +54,8 @@ jobs:
           context: frontend
           push: true
           tags: |
-            ${{ env.IMAGE_PREFIX }}/portfolio-frontend:latest
-            ${{ env.IMAGE_PREFIX }}/portfolio-frontend:${{ github.sha }}
+            ${{ env.IMAGE_PREFIX }}/reeldevjp-frontend:latest
+            ${{ env.IMAGE_PREFIX }}/reeldevjp-frontend:${{ github.sha }}
 
   # ─────────────── BFF ───────────────
   build-bff:
@@ -94,8 +94,8 @@ jobs:
           context: bff
           push: true
           tags: |
-            ${{ env.IMAGE_PREFIX }}/portfolio-bff:latest
-            ${{ env.IMAGE_PREFIX }}/portfolio-bff:${{ github.sha }}
+            ${{ env.IMAGE_PREFIX }}/reeldevjp-bff:latest
+            ${{ env.IMAGE_PREFIX }}/reeldevjp-bff:${{ github.sha }}
 
   # ─────────────── Update k8s image tag ───────────────
   update-image-tag:

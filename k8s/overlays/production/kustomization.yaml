@@ -12,18 +12,18 @@ patches:
         value: 3
     target:
       kind: Deployment
-      name: portfolio-frontend
+      name: reeldevjp-frontend
   - patch: |-
       - op: replace
         path: /spec/replicas
         value: 3
     target:
       kind: Deployment
-      name: portfolio-bff
+      name: reeldevjp-bff
 
 # イメージタグは ArgoCD Image Updater または CI で上書き
 images:
-  - name: ghcr.io/penti-nameko/portfolio-frontend
+  - name: ghcr.io/penti-nameko/reeldevjp-frontend
     newTag: "latest"
-  - name: ghcr.io/penti-nameko/portfolio-bff
+  - name: ghcr.io/penti-nameko/reeldevjp-bff
     newTag: "latest"

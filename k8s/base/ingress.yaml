@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: portfolio-ingress
+  name: reeldevjp-ingress
   annotations:
     # ingress-nginx
     nginx.ingress.kubernetes.io/proxy-body-size: "10m"
@@ -13,7 +13,7 @@ spec:
   tls:
     - hosts:
         - yourname.dev
-      secretName: portfolio-tls
+      secretName: reeldevjp-tls
   rules:
     - host: yourname.dev
       http:
@@ -23,7 +23,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: portfolio-bff
+                name: reeldevjp-bff
                 port:
                   number: 3001
           # それ以外は Frontend へ
@@ -31,6 +31,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: portfolio-frontend
+                name: reeldevjp-frontend
                 port:
                   number: 80

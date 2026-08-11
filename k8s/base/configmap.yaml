@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: portfolio-config
+  name: reeldevjp-config
 data:
   QIITA_USER: "yourname"                         # ← Qiita ユーザー名に変更
   CORS_ORIGIN: "https://yourname.dev"            # ← 本番ドメインに変更

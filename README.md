@@ -84,3 +84,10 @@ ArgoCD が Git リポジトリを監視 → 自動 sync
 GitHub Actions が push 時に Docker イメージをビルド & ghcr.io へ push
 CI が kustomization.yaml のイメージタグを更新 → ArgoCD が検知 → 自動デプロイ
 ```
+
+kubectl -n reeldevjp create secret generic reeldevjp-secrets \
+  --from-literal=QIITA_USER=riel-hosiduki \
+  --from-literal=QIITA_TOKEN=本物のQiitaトークン \
+  --from-literal=CORS_ORIGIN=http://localhost:5173 \
+  --from-literal=PORT=3001 \
+  --dry-run=client -o yaml | kubectl apply -f -

@@ -11,5 +11,10 @@ resources:
 
 namespace: reeldevjp
 
+# ─── 以下の4行を追加（behavior: empty にするのが正解でした） ───
+secretGenerator:
+  - name: reeldevjp-secrets
+    behavior: empty
+
 generatorOptions:
   disableNameSuffixHash: true

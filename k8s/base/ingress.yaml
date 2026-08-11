@@ -12,10 +12,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - yourname.dev
+        - reeldev.jp
       secretName: reeldevjp-tls
   rules:
-    - host: yourname.dev
+    - host: reeldev.jp
       http:
         paths:
           # /api/* は BFF へ

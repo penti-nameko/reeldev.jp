@@ -10,3 +10,10 @@ resources:
   - ingress.yaml
 
 namespace: reeldevjp
+
+secretGenerator:
+  - name: reeldevjp-secrets
+    behavior: creates
+
+generatorOptions:
+  disableNameSuffixHash: true

@@ -12,6 +12,10 @@ bff/dist/
 .env.local
 .env.*.local
 
+# ───────── Secrets / k8s ─────────
+# secret.yaml は絶対にコミットしない
+k8s/base/secret.yaml
+
 # ───────── Logs ─────────
 *.log
 npm-debug.log*

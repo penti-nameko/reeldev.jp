@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: reeldevjp-config
 data:
-  QIITA_USER: "yourname"                         # ← Qiita ユーザー名に変更
-  CORS_ORIGIN: "https://yourname.dev"            # ← 本番ドメインに変更
+  QIITA_USER: "riel-hosiduki"                         # ← Qiita ユーザー名に変更
+  CORS_ORIGIN: "https://reeldev.jp"            # ← 本番ドメインに変更

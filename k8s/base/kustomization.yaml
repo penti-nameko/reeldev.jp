@@ -3,11 +3,10 @@ kind: Kustomization
 
 resources:
   - configmap.yaml
-  - secret.yaml
   - frontend-deployment.yaml
   - frontend-service.yaml
   - bff-deployment.yaml
   - bff-service.yaml
   - ingress.yaml
 
-namespace: portfolio
+namespace: reeldevjp

@@ -24,10 +24,10 @@ patches:
 # イメージタグは ArgoCD Image Updater または CI で上書き
 images:
   - name: ghcr.io/penti-nameko/portfolio-frontend
-    newTag: "476932e6dbac49f1daf9d2f06483edf84a3830cb"
+    newTag: "0886f67854b1452bb2777f2b9376b97fdf43abe8"
   - name: ghcr.io/penti-nameko/portfolio-bff
-    newTag: "476932e6dbac49f1daf9d2f06483edf84a3830cb"
+    newTag: "0886f67854b1452bb2777f2b9376b97fdf43abe8"
   - name: ghcr.io/penti-nameko/reeldevjp-frontend
-    newTag: "476932e6dbac49f1daf9d2f06483edf84a3830cb"
+    newTag: "0886f67854b1452bb2777f2b9376b97fdf43abe8"
   - name: ghcr.io/penti-nameko/reeldevjp-bff
-    newTag: "476932e6dbac49f1daf9d2f06483edf84a3830cb"
+    newTag: "0886f67854b1452bb2777f2b9376b97fdf43abe8"

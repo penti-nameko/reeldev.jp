@@ -1,0 +1,18 @@
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: buffermiddleware
+  namespace: reeldevjp
+spec:
+  buffering:
+    maxRequestBodyBytes: 10485760 # 10MB
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: timeoutmiddleware
+  namespace: reeldevjp
+spec:
+  headers:
+    # 応答タイムアウトや接続制御用（Traefik公式 CRD）
+    # ※タイムアウトの厳密な定義は Transport / ServerTransport で設定することも可能です

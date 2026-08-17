@@ -5,7 +5,7 @@ metadata:
   namespace: reeldevjp
 spec:
   buffering:
-    maxRequestBodyBytes: 10485760 # 10MB
+    maxRequestBodyBytes: 10485760
 ---
 apiVersion: traefik.io/v1alpha1
 kind: Middleware

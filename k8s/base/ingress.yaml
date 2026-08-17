@@ -9,7 +9,7 @@ metadata:
     # TLS: cert-manager で自動発行する場合
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
-  ingressClassName: nginx
+  ingressClassName: traefik
   tls:
     - hosts:
         - reeldev.jp

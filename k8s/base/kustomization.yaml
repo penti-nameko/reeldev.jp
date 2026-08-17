@@ -8,5 +8,6 @@ resources:
   - bff-deployment.yaml
   - bff-service.yaml
   - ingress.yaml
+  - traefik-middlewares.yaml
 
 namespace: reeldevjp

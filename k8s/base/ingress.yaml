@@ -5,7 +5,7 @@ metadata:
   namespace: reeldevjp
   annotations:
     # Traefik Middlewares の指定 (namespace-name@kubernetescrd 形式)
-    traefik.ingress.kubernetes.io/router.middlewares: "reeldevjp-buffermiddleware@kubernetescrd"
+    traefik.ingress.kubernetes.io/router.middlewares: "buffermiddleware-reeldevjp@kubernetescrd"
     # TLS: cert-manager（そのままで動作します）
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
